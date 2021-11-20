@@ -15,6 +15,18 @@ function Header() {
         <s.Userimg src={user} alt="logo" />
         <s.Cartimg src={cart} alt="logo" />
       </s.HeadDiv>
+      <s.HeadLine />
+      <s.MenuDiv>
+        <s.FStart>
+          <s.MenuBtn1 type="button" value="베스트딜" />
+          <s.MenuBtn type="button" value="할인상품" />
+          <s.MenuBtn type="button" value="쿠폰/혜택" />
+          <s.MenuBtn type="button" value="당일배송" />
+          <s.LoginBtn type="button" value="로그인/회원가입" />
+        </s.FStart>
+        <s.Banner />
+        <s.FieldMenu></s.FieldMenu>
+      </s.MenuDiv>
     </s.Head>
   );
 }
