@@ -24,8 +24,6 @@ function Header() {
           <s.MenuBtn type="button" value="당일배송" />
           <s.LoginBtn type="button" value="로그인/회원가입" />
         </s.FStart>
-        <s.Banner />
-        <s.FieldMenu></s.FieldMenu>
       </s.MenuDiv>
     </s.Head>
   );

@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 export const Head = styled.div`
   width: 100%;
-  height: 80px;
   padding: 0;
 `;
 
@@ -14,35 +13,35 @@ export const HeadDiv = styled.div`
 `;
 
 export const LogoImg = styled.img`
-  width: 90px;
-  height: 90px;
+  width: 100px;
+  height: 100px;
   margin-right: 70px;
   margin-left: 100px;
 `;
 
 export const Select = styled.input`
-  width: 400px;
-  height: 22px;
+  width: 900px;
+  height: 25px;
   padding-top: 2px;
   padding-left: 12px;
-  margin-right: 650px;
+  margin-right: 550px;
   font-family: "Noto Sans KR", sans-serif;
 `;
 
 export const Truckimg = styled.img`
-  width: 40px;
-  height: 40px;
+  width: 45px;
+  height: 45px;
   margin-right: 35px;
 `;
 
 export const Userimg = styled.img`
-  width: 30px;
-  height: 30px;
+  width: 35px;
+  height: 3r5px;
   margin-right: 35px;
 `;
 export const Cartimg = styled.img`
-  width: 35px;
-  height: 35px;
+  width: 40px;
+  height: 40px;
   margin-right: 70px;
 `;
 
@@ -55,7 +54,10 @@ export const HeadLine = styled.div`
 
 export const MenuDiv = styled.div`
   width: 100%;
-  height: 40px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
 
 export const FStart = styled.div`
@@ -66,9 +68,9 @@ export const FStart = styled.div`
 export const MenuBtn1 = styled.input`
   margin-left: 70px;
   margin-right: 10px;
-  margin-top: 10px;
   border: none;
   background-color: white;
+  font-size: 16px;
   font-family: "Noto Sans KR", sans-serif;
   &:hover {
     text-decoration: underline;
@@ -77,9 +79,9 @@ export const MenuBtn1 = styled.input`
 
 export const MenuBtn = styled.input`
   margin-right: 15px;
-  margin-top: 10px;
   border: none;
   background-color: white;
+  font-size: 16px;
   font-family: "Noto Sans KR", sans-serif;
   &:hover {
     text-decoration: underline;
@@ -87,26 +89,60 @@ export const MenuBtn = styled.input`
 `;
 
 export const LoginBtn = styled.input`
-  margin-left: 980px;
-  margin-right: 15px;
-  margin-top: 10px;
+  margin-left: 900px;
+  margin-right: 10px;
   border: none;
   background-color: white;
+  font-size: 16px;
   font-family: "Noto Sans KR", sans-serif;
   &:hover {
     text-decoration: underline;
   }
 `;
 
-export const Banner = styled.div`
-  width: 100%;
-  height: 350px;
-  margin-top: 10px;
-  background-color: black;
-`;
-
 export const FieldMenu = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 80px;
+`;
+
+export const MenuUl = styled.ul`
+  list-style: none;
+  margin: 0;
+  padding: 0;
+`;
+
+export const MenuLi = styled.li`
+  margin-right: 100px;
+  padding: 0 0 0 0;
+  border: 0;
+  float: left;
+  text-align: center;
+  font-family: "Noto Sans KR", sans-serif;
+  &:hover {
+    text-decoration: underline;
+  }
+`;
+
+export const MenuLi5 = styled.li`
+  padding: 0 0 0 0;
+  border: 0;
+  float: left;
+  text-align: center;
+  font-family: "Noto Sans KR", sans-serif;
+  &:hover {
+    text-decoration: underline;
+  }
+`;
+
+export const MenuImg = styled.img`
+  width: 70px;
+  height: 70px;
+  display: block;
+`;
+
+export const starMenu = styled.div`
+  width: 100%;
+  height: 100%;
 `;
