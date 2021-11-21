@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 export const Main = styled.div`
   width: 100%;
-  height: 100px;
   padding: 0;
 `;
 
@@ -63,7 +62,7 @@ export const StarMenu = styled.div`
   width: 100%;
   height: 700px;
   margin-top: 80px;
-  background-color: #707070;
+  background-color: black;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
