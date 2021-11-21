@@ -7,6 +7,15 @@ import ticket from "../../../assets/plane-tickets.png";
 import * as s from "./style";
 
 function Mainpage() {
+  const menus = ["1", "2", "3", "4", "5", "6", "7", "8"];
+
+  const menuList = menus.map((menu, index) => {
+    return (
+      <>
+        <s.StarMenuList>{menu}</s.StarMenuList>
+      </>
+    );
+  });
   return (
     <s.Main>
       <s.BannerDiv>
@@ -35,6 +44,7 @@ function Mainpage() {
           </s.MenuLi5>
         </s.MenuUl>
       </s.FieldMenu>
+      <s.StarMenu>{menuList}</s.StarMenu>
     </s.Main>
   );
 }

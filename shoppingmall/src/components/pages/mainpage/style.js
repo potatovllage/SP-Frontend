@@ -14,7 +14,7 @@ export const BannerDiv = styled.div`
 export const Banner = styled.div`
   width: 100%;
   height: 350px;
-  background-color: black;
+  background-color: #707070;
 `;
 
 export const FieldMenu = styled.div`
@@ -59,7 +59,24 @@ export const MenuImg = styled.img`
   display: block;
 `;
 
-export const starMenu = styled.div`
+export const StarMenu = styled.div`
   width: 100%;
-  height: 100%;
+  height: 700px;
+  margin-top: 80px;
+  background-color: #707070;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+`;
+
+export const StarMenuList = styled.div`
+  width: 300px;
+  height: 180px;
+  margin-right: 20px;
+  margin-left: 20px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
