@@ -11,7 +11,7 @@ export const BannerDiv = styled.div`
 `;
 
 export const Banner = styled.div`
-  width: 100vw;
+  width: 100%;
   height: 300px;
   overflow: hidden;
 `;
@@ -45,7 +45,7 @@ const slide = keyframes`
   margin-left: 0;
 }`;
 export const BannerUl = styled.ul`
-  width: calc(100vw * 4);
+  width: calc(100% * 4);
   display: flex;
   animation: ${slide} 18s infinite;
   padding: 0;
@@ -53,7 +53,7 @@ export const BannerUl = styled.ul`
 
 export const BannerLi = styled.li`
   display: block;
-  width: 100vw;
+  width: 25%;
   height: 300px;
   background-size: cover;
   background-repeat: no-repeat;
