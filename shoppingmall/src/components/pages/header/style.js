@@ -68,6 +68,7 @@ export const FStart = styled.div`
 export const MenuBtn1 = styled.input`
   margin-left: 70px;
   margin-right: 10px;
+  margin-top: 15px;
   border: none;
   background-color: white;
   font-size: 16px;
@@ -79,6 +80,7 @@ export const MenuBtn1 = styled.input`
 
 export const MenuBtn = styled.input`
   margin-right: 15px;
+  margin-top: 15px;
   border: none;
   background-color: white;
   font-size: 16px;
@@ -91,6 +93,7 @@ export const MenuBtn = styled.input`
 export const LoginBtn = styled.input`
   margin-left: 900px;
   margin-right: 10px;
+  margin-top: 15px;
   border: none;
   background-color: white;
   font-size: 16px;
