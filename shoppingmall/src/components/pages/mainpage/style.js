@@ -12,57 +12,53 @@ export const BannerDiv = styled.div`
 
 export const Banner = styled.div`
   width: 100%;
-  height: 350px;
+  height: 300px;
   overflow: hidden;
 `;
 
-export const BannerUl = styled.ul`
-  width: calc(1100px * 4);
-  display: flex;
-  animation: slide 18s infinite;
-  padding: 0;
-`;
-
-export const BannerLi = styled.li`
-  display: block;
-  width: 1100px;
-  height: 300px;
-  background-repeat: no-repeat;
-  background-position: center;
-  ${(props) =>
-    props.active &&
-    `
-   animation: ${slide} 2s 1s infinite linear alternate;
-  `}
-`;
-
-const slide = keyframes` 0% {
+const slide = keyframes`
+ 0% {
   margin-left: 0;
 }
 10% {
   margin-left: 0;
 }
 25% {
-  margin-left: -1100px;
+  margin-left: -100%;
 }
 35% {
-  margin-left: -1100px;
+  margin-left: -100%;
 }
 50% {
-  margin-left: -2200px;
+  margin-left: -200%;
 }
 60% {
-  margin-left: -2200px;
+  margin-left: -200%;
 }
 75% {
-  margin-left: -3300px;
+  margin-left: -300%;
 }
 85% {
-  margin-left: -3300px;
+  margin-left: -300%;
 }
 100% {
   margin-left: 0;
 }`;
+export const BannerUl = styled.ul`
+  width: calc(100vw * 4);
+  display: flex;
+  animation: ${slide} 18s infinite;
+  padding: 0;
+`;
+
+export const BannerLi = styled.li`
+  display: block;
+  width: 100vw;
+  height: 300px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+`;
 
 export const FieldMenu = styled.div`
   display: flex;
