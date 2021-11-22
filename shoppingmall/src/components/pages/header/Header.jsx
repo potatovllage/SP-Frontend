@@ -1,5 +1,5 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import logo from "../../../assets/logo.jpg";
 import truck from "../../../assets/van.png";
 import user from "../../../assets/user.png";
@@ -12,6 +12,7 @@ function Header() {
   const mainHistory = () => {
     navigate("/");
   };
+
   return (
     <s.Head>
       <s.HeadDiv>
@@ -28,7 +29,9 @@ function Header() {
           <s.MenuBtn type="button" value="할인상품" />
           <s.MenuBtn type="button" value="쿠폰/혜택" />
           <s.MenuBtn type="button" value="당일배송" />
-          <s.LoginBtn type="button" value="로그인/회원가입" />
+          <Link to="/login">
+            <s.LoginBtn type="button" value="로그인/회원가입" />{" "}
+          </Link>
         </s.FStart>
       </s.MenuDiv>
     </s.Head>
