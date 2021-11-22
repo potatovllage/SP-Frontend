@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 
 export const Main = styled.div`
   width: 100%;
@@ -13,8 +13,56 @@ export const BannerDiv = styled.div`
 export const Banner = styled.div`
   width: 100%;
   height: 350px;
-  background-color: #707070;
+  overflow: hidden;
 `;
+
+export const BannerUl = styled.ul`
+  width: calc(1100px * 4);
+  display: flex;
+  animation: slide 18s infinite;
+  padding: 0;
+`;
+
+export const BannerLi = styled.li`
+  display: block;
+  width: 1100px;
+  height: 300px;
+  background-repeat: no-repeat;
+  background-position: center;
+  ${(props) =>
+    props.active &&
+    `
+   animation: ${slide} 2s 1s infinite linear alternate;
+  `}
+`;
+
+const slide = keyframes` 0% {
+  margin-left: 0;
+}
+10% {
+  margin-left: 0;
+}
+25% {
+  margin-left: -1100px;
+}
+35% {
+  margin-left: -1100px;
+}
+50% {
+  margin-left: -2200px;
+}
+60% {
+  margin-left: -2200px;
+}
+75% {
+  margin-left: -3300px;
+}
+85% {
+  margin-left: -3300px;
+}
+100% {
+  margin-left: 0;
+}`;
 
 export const FieldMenu = styled.div`
   display: flex;
@@ -62,7 +110,7 @@ export const StarMenu = styled.div`
   width: 100%;
   height: 700px;
   margin-top: 80px;
-  background-color: black;
+  background-color: #707070;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;

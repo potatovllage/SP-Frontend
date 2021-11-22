@@ -4,6 +4,9 @@ import car from "../../../assets/sports-car.png";
 import hotel from "../../../assets/hotel.png";
 import globe from "../../../assets/globe.png";
 import ticket from "../../../assets/plane-tickets.png";
+import banner1 from "../../../assets/banner1.png";
+import banner2 from "../../../assets/banner2.png";
+import banner3 from "../../../assets/banner3.png";
 import * as s from "./style";
 
 function Mainpage() {
@@ -19,7 +22,13 @@ function Mainpage() {
   return (
     <s.Main>
       <s.BannerDiv>
-        <s.Banner />
+        <s.Banner>
+          <s.BannerUl>
+            <s.BannerLi style={{ backgroundImage: `url(${banner1})` }} />{" "}
+            <s.BannerLi style={{ backgroundImage: `url(${banner2})` }} />
+            <s.BannerLi style={{ backgroundImage: `url(${banner3})` }} />
+          </s.BannerUl>
+        </s.Banner>
       </s.BannerDiv>
       <s.FieldMenu>
         <s.MenuUl>
