@@ -18,9 +18,9 @@ function Header() {
       <s.HeadDiv>
         <s.LogoImg src={logo} alt="logo" onClick={mainHistory} />
         <s.Select type="text" placeholder="검색어를 입력해주세요" />
-        <s.Truckimg src={truck} alt="logo" />
-        <s.Userimg src={user} alt="logo" />
         <s.Cartimg src={cart} alt="logo" />
+        <s.Userimg src={user} alt="logo" />
+        <s.Truckimg src={truck} alt="logo" />
       </s.HeadDiv>
       <s.HeadLine />
       <s.MenuDiv>

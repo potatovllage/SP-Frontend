@@ -28,9 +28,9 @@ export const Select = styled.input`
   font-family: "Noto Sans KR", sans-serif;
 `;
 
-export const Truckimg = styled.img`
-  width: 45px;
-  height: 45px;
+export const Cartimg = styled.img`
+  width: 40px;
+  height: 40px;
   margin-right: 35px;
 `;
 
@@ -39,9 +39,9 @@ export const Userimg = styled.img`
   height: 3r5px;
   margin-right: 35px;
 `;
-export const Cartimg = styled.img`
-  width: 40px;
-  height: 40px;
+export const Truckimg = styled.img`
+  width: 45px;
+  height: 45px;
   margin-right: 70px;
 `;
 
