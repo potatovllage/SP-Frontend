@@ -14,9 +14,20 @@ export const TruckTable = styled.div`
   margin-top: 50px;
 `;
 
-export const TableName = styled.div``;
+export const TableName = styled.div`
+  margin-top: 30px;
+`;
 
 export const Table = styled.table`
   width: 800px;
   border: 1px solid #444444;
+`;
+
+export const TableTd = styled.td`
+  padding-top: 10px;
+`;
+
+export const LastTd = styled.td`
+  padding-top: 10px;
+  padding-bottom: 10px;
 `;

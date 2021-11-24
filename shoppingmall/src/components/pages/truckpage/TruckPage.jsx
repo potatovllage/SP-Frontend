@@ -11,34 +11,38 @@ function TruckPage() {
         <s.TruckTable>
           <s.Table>
             <tr>
-              <td>택배 회사</td>
-              <td>링크</td>
+              <s.TableTd>택배 회사</s.TableTd>
+              <s.TableTd>링크</s.TableTd>
             </tr>
             <tr>
-              <td>CJ 대한통운</td>
-              <td>https://www.cjlogistics.com//ko/tool/parcel/tracking</td>
+              <s.TableTd>CJ 대한통운</s.TableTd>
+              <s.TableTd>
+                https://www.cjlogistics.com//ko/tool/parcel/tracking
+              </s.TableTd>
             </tr>
             <tr>
-              <td>로젠택배</td>
-              <td>https://www.ilogen.com/web/personal/tkSearch</td>
+              <s.TableTd>로젠택배</s.TableTd>
+              <s.TableTd>
+                https://www.ilogen.com/web/personal/tkSearch
+              </s.TableTd>
             </tr>
             <tr>
-              <td>한진</td>
-              <td>
+              <s.TableTd>한진</s.TableTd>
+              <s.TableTd>
                 https://www.hanjin.co.kr/kor/CMS/DeliveryMgr/WaybillSch.do?mCode=MN038
-              </td>
+              </s.TableTd>
             </tr>
             <tr>
-              <td>롯데택배</td>
-              <td>
+              <s.TableTd>롯데택배</s.TableTd>
+              <s.TableTd>
                 https://www.lotteglogis.com/mobile/reservation/tracking/index
-              </td>
+              </s.TableTd>
             </tr>
             <tr>
-              <td>우채국택배</td>
-              <td>
+              <s.LastTd>우채국택배</s.LastTd>
+              <s.LastTd>
                 https://service.epost.go.kr/trace.RetrieveEmsRigiTrace.comm
-              </td>
+              </s.LastTd>
             </tr>
           </s.Table>
         </s.TruckTable>
