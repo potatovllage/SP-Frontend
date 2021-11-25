@@ -21,6 +21,7 @@ export const Signform = styled.div`
 export const Signlogo = styled.img`
   width: 100px;
   height: 100px;
+  margin-top: 10px;
 `;
 
 export const SignE = styled.input`
@@ -52,16 +53,14 @@ export const SignPw = styled.input`
 
 export const SignSub = styled.input`
   width: 250px;
-  height: 30px;
+  height: 40px;
   margin-top: 50px;
   padding-left: 20px;
   border: none;
   border-radius: 15px;
   background-color: black;
   color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  text-align: center;
 `;
 
 export const Linklogin = styled.input`
