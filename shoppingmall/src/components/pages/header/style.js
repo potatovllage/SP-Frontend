@@ -40,8 +40,9 @@ export const Userimg = styled.img`
   margin-right: 35px;
 `;
 export const Truckimg = styled.img`
-  width: 45px;
-  height: 45px;
+  width: 48px;
+  height: 48px;
+  margin-top: 3px;
   margin-right: 70px;
 `;
 

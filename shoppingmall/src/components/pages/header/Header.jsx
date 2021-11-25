@@ -13,6 +13,10 @@ function Header() {
     navigate("/");
   };
 
+  const truckHistory = () => {
+    navigate("/truck");
+  };
+
   return (
     <s.Head>
       <s.HeadDiv>
@@ -20,7 +24,7 @@ function Header() {
         <s.Select type="text" placeholder="검색어를 입력해주세요" />
         <s.Cartimg src={cart} alt="logo" />
         <s.Userimg src={user} alt="logo" />
-        <s.Truckimg src={truck} alt="logo" />
+        <s.Truckimg src={truck} alt="logo" onClick={truckHistory} />
       </s.HeadDiv>
       <s.HeadLine />
       <s.MenuDiv>
