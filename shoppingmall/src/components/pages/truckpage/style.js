@@ -3,6 +3,13 @@ import styled from "styled-components";
 export const Truck = styled.div`
   width: 100%;
   display: flex;
+  flex-direction: column;
+`;
+
+export const TableName = styled.div`
+  width: 890px;
+  margin-top: 70px;
+  display: flex;
   justify-content: center;
 `;
 
@@ -11,10 +18,6 @@ export const TruckTable = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 50px;
-`;
-
-export const TableName = styled.div`
   margin-top: 30px;
 `;
 
@@ -25,9 +28,11 @@ export const Table = styled.table`
 
 export const TableTd = styled.td`
   padding-top: 10px;
+  text-align: center;
 `;
 
 export const LastTd = styled.td`
   padding-top: 10px;
   padding-bottom: 10px;
+  text-align: center;
 `;

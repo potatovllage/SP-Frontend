@@ -17,31 +17,69 @@ function TruckPage() {
             <tr>
               <s.TableTd>CJ 대한통운</s.TableTd>
               <s.TableTd>
-                https://www.cjlogistics.com//ko/tool/parcel/tracking
+                <button
+                  onClick={() =>
+                    window.open(
+                      "https://www.cjlogistics.com//ko/tool/parcel/tracking"
+                    )
+                  }
+                >
+                  다음
+                </button>
               </s.TableTd>
             </tr>
             <tr>
               <s.TableTd>로젠택배</s.TableTd>
               <s.TableTd>
-                https://www.ilogen.com/web/personal/tkSearch
+                <button
+                  onClick={() =>
+                    window.open("https://www.ilogen.com/web/personal/tkSearch")
+                  }
+                >
+                  다음
+                </button>
               </s.TableTd>
             </tr>
             <tr>
               <s.TableTd>한진</s.TableTd>
               <s.TableTd>
-                https://www.hanjin.co.kr/kor/CMS/DeliveryMgr/WaybillSch.do?mCode=MN038
+                <button
+                  onClick={() =>
+                    window.open(
+                      "https://www.hanjin.co.kr/kor/CMS/DeliveryMgr/WaybillSch.do?mCode=MN038"
+                    )
+                  }
+                >
+                  다음
+                </button>
               </s.TableTd>
             </tr>
             <tr>
               <s.TableTd>롯데택배</s.TableTd>
               <s.TableTd>
-                https://www.lotteglogis.com/mobile/reservation/tracking/index
+                <button
+                  onClick={() =>
+                    window.open(
+                      "https://www.lotteglogis.com/mobile/reservation/tracking/index"
+                    )
+                  }
+                >
+                  다음
+                </button>
               </s.TableTd>
             </tr>
             <tr>
               <s.LastTd>우채국택배</s.LastTd>
               <s.LastTd>
-                https://service.epost.go.kr/trace.RetrieveEmsRigiTrace.comm
+                <button
+                  onClick={() =>
+                    window.open(
+                      "https://service.epost.go.kr/iservice/usr/trace/usrtrc001k01.jsp"
+                    )
+                  }
+                >
+                  다음
+                </button>
               </s.LastTd>
             </tr>
           </s.Table>
