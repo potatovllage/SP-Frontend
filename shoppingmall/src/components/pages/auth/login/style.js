@@ -59,9 +59,7 @@ export const LoginSub = styled.input`
   border-radius: 15px;
   background-color: black;
   color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  text-align: center;
 `;
 
 export const LinkSign = styled.input`
