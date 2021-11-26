@@ -31,7 +31,9 @@ function Header() {
         <s.FStart>
           <s.MenuBtn1 type="button" value="베스트딜" />
           <s.MenuBtn type="button" value="할인상품" />
-          <s.MenuBtn type="button" value="쿠폰/혜택" />
+          <Link to="/coupon">
+            <s.MenuBtn type="button" value="쿠폰/혜택" />
+          </Link>
           <s.MenuBtn type="button" value="당일배송" />
           <Link to="/login">
             <s.LoginBtn type="button" value="로그인/회원가입" />{" "}
