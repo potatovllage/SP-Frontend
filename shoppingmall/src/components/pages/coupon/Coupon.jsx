@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Header from "../header/Header";
 import banner4 from "../../../assets/banner4.png";
 import coupon1 from "../../../assets/coupon1.png";
@@ -13,8 +14,12 @@ function Coupon() {
     <>
       <Header />
       <s.Interver>
-        <s.CouponBtn type="button" value="할인은 이곳 쿠폰존" />
-        <s.BenefitsBtn type="button" value="모든 혜택은 이곳 혜택존" />
+        <Link to="/coupon">
+          <s.CouponBtn type="button" value="할인은 이곳 쿠폰존" />
+        </Link>
+        <Link to="/benefit">
+          <s.BenefitsBtn type="button" value="모든 혜택은 이곳 혜택존" />
+        </Link>
       </s.Interver>
       <s.Coupon>
         <s.Couponform>
