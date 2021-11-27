@@ -1,9 +1,43 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import logo from "../../../../assets/logo.jpg";
 import * as s from "./style";
+import axios from "axios";
 
 function SignUp() {
+  const [input, setInput] = useState({
+    email: "",
+    userid: "",
+    password: "",
+    nickname: "",
+  });
+
+  const { email, userid, password, nickname } = input;
+
+  const onChange = (e) => {
+    const { value, name } = e.target;
+    setInput({
+      ...input,
+      [name]: value,
+    });
+  };
+
+  const submitOn = () => {
+    axios
+      .post("http://13.125.241.207:8088/auth/join", {
+        email: email,
+        userid: userid,
+        password: password,
+        nickname: nickname,
+      })
+      .then((res) => {
+        console.log(res);
+      })
+      .catch((e) => {
+        console.log(e);
+      });
+  };
+
   const navigate = useNavigate();
 
   const mainHistory = () => {
@@ -13,11 +47,11 @@ function SignUp() {
     <s.SignDiv>
       <s.Signform>
         <s.Signlogo src={logo} alt="logo" onClick={mainHistory} />
-        <s.SignE type="text" placeholder="E-mail" />
-        <s.SignId type="text" placeholder="ID" />
-        <s.SignPw type="text" placeholder="Password" />
-        <s.SignPw type="text" placeholder="NickName" />
-        <s.SignSub type="button" value="SIGN UP" />
+        <s.SignE type="text" placeholder="E-mail" onChange={onChange} />
+        <s.SignId type="text" placeholder="ID" onChange={onChange} />
+        <s.SignPw type="password" placeholder="Password" onChange={onChange} />
+        <s.SignPw type="text" placeholder="NickName" onChange={onChange} />
+        <s.SignSub type="button" value="SIGN UP" onClick={submitOn} />
         <Link to="/login">
           <s.Linklogin type="button" value="로그인" />
         </Link>
