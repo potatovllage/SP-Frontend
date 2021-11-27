@@ -11,7 +11,7 @@ export const Interver = styled.div`
 
 export const Coupon = styled.div`
   width: 100%;
-  height: 1500px;
+  height: 1400px;
   display: flex;
   justify-content: center;
   background-color: rgba(0, 0, 0, 0.5);
@@ -19,8 +19,12 @@ export const Coupon = styled.div`
 
 export const Couponform = styled.div`
   width: 1000px;
-  height: 1400px;
+  height: 1300px;
   background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 `;
 
 export const CouponBtn = styled.input`
@@ -47,4 +51,40 @@ export const BenefitsBtn = styled.input`
 export const CouponBanner = styled.img`
   width: 1000px;
   height: 120px;
+`;
+
+export const Coupon1 = styled.img`
+  width: 800px;
+  height: 200px;
+  margin-top: 20px;
+  background-color: black;
+`;
+
+export const Coupon2 = styled.img`
+  width: 800px;
+  height: 200px;
+  margin-top: 20px;
+  background-color: black;
+`;
+
+export const Coupon3 = styled.img`
+  width: 800px;
+  height: 200px;
+  margin-top: 20px;
+  background-color: black;
+`;
+
+export const Coupon4 = styled.img`
+  width: 800px;
+  height: 200px;
+  margin-top: 20px;
+  background-color: black;
+`;
+
+export const Coupon5 = styled.img`
+  width: 800px;
+  height: 200px;
+  margin-top: 20px;
+  margin-bottom: 80px;
+  background-color: black;
 `;
