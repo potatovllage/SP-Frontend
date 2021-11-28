@@ -47,10 +47,30 @@ function SignUp() {
     <s.SignDiv>
       <s.Signform>
         <s.Signlogo src={logo} alt="logo" onClick={mainHistory} />
-        <s.SignE type="text" placeholder="E-mail" onChange={onChange} />
-        <s.SignId type="text" placeholder="ID" onChange={onChange} />
-        <s.SignPw type="password" placeholder="Password" onChange={onChange} />
-        <s.SignPw type="text" placeholder="NickName" onChange={onChange} />
+        <s.SignE
+          name="email"
+          type="text"
+          placeholder="E-mail"
+          onChange={onChange}
+        />
+        <s.SignId
+          name="userid"
+          type="text"
+          placeholder="ID"
+          onChange={onChange}
+        />
+        <s.SignPw
+          name="password"
+          type="password"
+          placeholder="Password"
+          onChange={onChange}
+        />
+        <s.SignPw
+          name="nickname"
+          type="text"
+          placeholder="NickName"
+          onChange={onChange}
+        />
         <s.SignSub type="button" value="SIGN UP" onClick={submitOn} />
         <Link to="/login">
           <s.Linklogin type="button" value="로그인" />
