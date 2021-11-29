@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import book from "../../../assets/book.png";
 import car from "../../../assets/sports-car.png";
 import hotel from "../../../assets/hotel.png";
@@ -35,25 +36,35 @@ function Mainpage() {
         </s.BannerDiv>
         <s.FieldMenu>
           <s.MenuUl>
-            <s.MenuLi>
-              <s.MenuImg src={book} alt="logo" />책
-            </s.MenuLi>
-            <s.MenuLi>
-              <s.MenuImg src={car} alt="logo" />
-              자동차용품
-            </s.MenuLi>
-            <s.MenuLi>
-              <s.MenuImg src={hotel} alt="logo" />
-              호텔
-            </s.MenuLi>
-            <s.MenuLi>
-              <s.MenuImg src={globe} alt="logo" />
-              해외직구
-            </s.MenuLi>
-            <s.MenuLi5>
-              <s.MenuImg src={ticket} alt="logo" />
-              티켓
-            </s.MenuLi5>
+            <Link to="/book">
+              <s.MenuLi>
+                <s.MenuImg src={book} alt="logo" />책
+              </s.MenuLi>
+            </Link>
+            <Link to="/car">
+              <s.MenuLi>
+                <s.MenuImg src={car} alt="logo" />
+                자동차용품
+              </s.MenuLi>
+            </Link>
+            <Link to="/hotel">
+              <s.MenuLi>
+                <s.MenuImg src={hotel} alt="logo" />
+                호텔
+              </s.MenuLi>
+            </Link>
+            <Link to="/globon">
+              <s.MenuLi>
+                <s.MenuImg src={globe} alt="logo" />
+                해외직구
+              </s.MenuLi>
+            </Link>
+            <Link to="/ticket">
+              <s.MenuLi5>
+                <s.MenuImg src={ticket} alt="logo" />
+                티켓
+              </s.MenuLi5>
+            </Link>
           </s.MenuUl>
         </s.FieldMenu>
         <s.StarMenu>{menuList}</s.StarMenu>

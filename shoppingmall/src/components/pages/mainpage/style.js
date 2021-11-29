@@ -83,6 +83,9 @@ export const MenuLi = styled.li`
   &:hover {
     text-decoration: underline;
   }
+  &:link {
+    color: black;
+  }
 `;
 
 export const MenuLi5 = styled.li`
@@ -93,6 +96,9 @@ export const MenuLi5 = styled.li`
   font-family: "Noto Sans KR", sans-serif;
   &:hover {
     text-decoration: underline;
+  }
+  &:link {
+    color: black;
   }
 `;
 
