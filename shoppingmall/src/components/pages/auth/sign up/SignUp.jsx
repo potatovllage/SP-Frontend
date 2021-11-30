@@ -32,6 +32,7 @@ function SignUp() {
       })
       .then((res) => {
         console.log(res);
+        navigate("/login");
       })
       .catch((e) => {
         console.log(e);
