@@ -33,7 +33,7 @@ function Hotel() {
     <>
       <Header />
       <s.Interver>
-        <h2>BOOK</h2>
+        <h2>호텔</h2>
       </s.Interver>
       <s.Hotel>
         <s.HotelList>{HotelList}</s.HotelList>

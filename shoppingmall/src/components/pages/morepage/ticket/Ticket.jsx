@@ -33,7 +33,7 @@ function Ticket() {
     <>
       <Header />
       <s.Interver>
-        <h2>BOOK</h2>
+        <h2>티켓</h2>
       </s.Interver>
       <s.Ticket>
         <s.TicketList>{TicketList}</s.TicketList>
