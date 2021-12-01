@@ -17,12 +17,16 @@ function Header() {
     navigate("/truck");
   };
 
+  const basketHistory = () => {
+    navigate("/basket");
+  };
+
   return (
     <s.Head>
       <s.HeadDiv>
         <s.LogoImg src={logo} alt="logo" onClick={mainHistory} />
         <s.Select type="text" placeholder="검색어를 입력해주세요" />
-        <s.Cartimg src={cart} alt="logo" />
+        <s.Cartimg src={cart} alt="logo" onClick={basketHistory} />
         <s.Userimg src={user} alt="logo" />
         <s.Truckimg src={truck} alt="logo" onClick={truckHistory} />
       </s.HeadDiv>
@@ -38,10 +42,9 @@ function Header() {
           <Link to="/coupon">
             <s.MenuBtn type="button" value="쿠폰/혜택" />
           </Link>
-          <Link to="today">
+          <Link to="/today">
             <s.MenuBtn type="button" value="당일배송" />
           </Link>
-
           <Link to="/login">
             <s.LoginBtn type="button" value="로그인/회원가입" />{" "}
           </Link>
