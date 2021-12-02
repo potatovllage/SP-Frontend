@@ -7,7 +7,10 @@ function Basket() {
     <>
       <Header />
       <s.Basket>
-        <s.basketname>장바구니</s.basketname>
+        <s.BasketMenu>
+          <s.basketname>장바구니</s.basketname>
+          <s.DeleteBtn type="button" value="삭제" />
+        </s.BasketMenu>
         <s.Basketform></s.Basketform>
       </s.Basket>
     </>
