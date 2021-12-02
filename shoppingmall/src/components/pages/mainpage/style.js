@@ -47,7 +47,7 @@ const slide = keyframes`
 export const BannerUl = styled.ul`
   width: calc(100% * 4);
   display: flex;
-  animation: ${slide} 18s infinite;
+  animation: ${slide} 16s infinite;
   padding: 0;
 `;
 
