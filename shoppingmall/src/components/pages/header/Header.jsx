@@ -7,6 +7,11 @@ import cart from "../../../assets/shopping-cart.png";
 import * as s from "./style";
 
 function Header() {
+  const onLogout = () => {
+    localStorage.removeItem("accessToken");
+    window.location.replace("/");
+  };
+
   const navigate = useNavigate();
 
   const mainHistory = () => {
@@ -21,13 +26,17 @@ function Header() {
     navigate("/basket");
   };
 
+  const MypageHistory = () => {
+    navigate("/mypage");
+  };
+
   return (
     <s.Head>
       <s.HeadDiv>
         <s.LogoImg src={logo} alt="logo" onClick={mainHistory} />
         <s.Select type="text" placeholder="검색어를 입력해주세요" />
         <s.Cartimg src={cart} alt="logo" onClick={basketHistory} />
-        <s.Userimg src={user} alt="logo" />
+        <s.Userimg src={user} alt="logo" onClick={MypageHistory} />
         <s.Truckimg src={truck} alt="logo" onClick={truckHistory} />
       </s.HeadDiv>
       <s.HeadLine />
@@ -45,9 +54,15 @@ function Header() {
           <Link to="/today">
             <s.MenuBtn type="button" value="당일배송" />
           </Link>
-          <Link to="/login">
-            <s.LoginBtn type="button" value="로그인/회원가입" />{" "}
-          </Link>
+          {localStorage.getItem("accessToken") ? (
+            <>
+              <s.Logout type="button" value="LOGOUT" onClick={onLogout} />
+            </>
+          ) : (
+            <Link to="/login">
+              <s.LoginBtn type="button" value="로그인/회원가입" />
+            </Link>
+          )}
         </s.FStart>
       </s.MenuDiv>
     </s.Head>

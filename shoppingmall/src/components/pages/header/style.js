@@ -104,6 +104,19 @@ export const LoginBtn = styled.input`
   }
 `;
 
+export const Logout = styled.input`
+  margin-left: 900px;
+  margin-right: 10px;
+  margin-top: 15px;
+  border: none;
+  background-color: white;
+  font-size: 16px;
+  font-family: "Noto Sans KR", sans-serif;
+  &:hover {
+    text-decoration: underline;
+  }
+`;
+
 export const FieldMenu = styled.div`
   display: flex;
   justify-content: center;
