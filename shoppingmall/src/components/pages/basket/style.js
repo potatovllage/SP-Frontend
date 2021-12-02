@@ -7,13 +7,14 @@ export const Basket = styled.div`
 `;
 
 export const basketname = styled.h2`
-  margin-left: 20px;
-  margin-bottom: 20px;
+  height: 20px;
+  margin-top: 40px;
 `;
 
 export const Basketform = styled.div`
   width: 1200px;
-  height: 800px;
+  height: 350px;
   border: 5px solid black;
-  margin-top: 50px;
+  margin-top: 80px;
+  display: flex;
 `;

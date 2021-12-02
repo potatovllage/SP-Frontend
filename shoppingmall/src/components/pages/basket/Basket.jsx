@@ -7,9 +7,8 @@ function Basket() {
     <>
       <Header />
       <s.Basket>
-        <s.Basketform>
-          <s.basketname>장바구니</s.basketname>
-        </s.Basketform>
+        <s.basketname>장바구니</s.basketname>
+        <s.Basketform></s.Basketform>
       </s.Basket>
     </>
   );
