@@ -39,13 +39,31 @@ function Product() {
       <s.Product>
         <s.ProductBoard>
           <s.ProductIMG />
-          <s.ProductName>
-            <h2>{`${productInfo.name}`}</h2>
-          </s.ProductName>
-          <s.Line />
-          <s.ProductPrice>
-            <h2>{`${productInfo.price}`}</h2>
-          </s.ProductPrice>
+          <s.ProductInfo>
+            <s.ProductName>
+              <h2>{`${productInfo.name}`}</h2>
+            </s.ProductName>
+            <s.Line />
+            <s.ProductPrice>
+              <h2>{`${productInfo.price}`}</h2>
+            </s.ProductPrice>
+            <s.UseCoupon>
+              <s.Select id="selectList" ref={detailRef}>
+                {PDetail.map((detail) => (
+                  <option key={detail}>{detail}</option>
+                ))}
+              </s.Select>
+            </s.UseCoupon>
+            <s.ProductQuantity>
+              <s.QDown type="button" value="-" onClick={onDecrease} />
+              <s.H2>{Quantity}</s.H2>
+              <s.QUp type="button" value="+" onClick={onIncrease} />
+            </s.ProductQuantity>
+            <s.ProductBuy>
+              <s.BasketBtn type="button" value="장바구니" />
+              <s.BuyBtn type="button" value="구매" />
+            </s.ProductBuy>
+          </s.ProductInfo>
         </s.ProductBoard>
       </s.Product>
     </>
