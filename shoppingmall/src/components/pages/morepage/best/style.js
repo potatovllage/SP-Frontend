@@ -34,4 +34,10 @@ export const BestProduct = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  &:hover {
+    text-decoration: none;
+  }
+  &:link {
+    color: black;
+  }
 `;

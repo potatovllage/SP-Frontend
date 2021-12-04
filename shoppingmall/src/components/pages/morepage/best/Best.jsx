@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Header from "../../header/Header";
 import * as s from "./style";
 
@@ -25,7 +26,9 @@ function Best() {
   const BestList = menus.map((menu, index) => {
     return (
       <>
-        <s.BestProduct>{menu}</s.BestProduct>
+        <Link to="/product">
+          <s.BestProduct>{menu}</s.BestProduct>
+        </Link>
       </>
     );
   });
