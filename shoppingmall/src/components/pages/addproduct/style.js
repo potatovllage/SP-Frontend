@@ -10,12 +10,16 @@ export const H2 = styled.h2``;
 export const AddForm = styled.div`
   width: 1200px;
   height: 800px;
-  padding: 25px;
+  padding: 20px;
   border: 5px solid black;
   margin-top: 50px;
+  display: flex;
+  justify-content: center;
 `;
 
-export const ImgForm = styled.div``;
+export const ImgForm = styled.div`
+  margin-right: 200px;
+`;
 
 export const AddImg = styled.div`
   width: 450px;
@@ -28,7 +32,9 @@ export const AddImg = styled.div`
   font-size: 40px;
 `;
 
-export const InfoAdd = styled.div``;
+export const InfoAdd = styled.div`
+  margin-top: 30px;
+`;
 
 export const AddName = styled.input`
   width: 300px;
@@ -37,9 +43,37 @@ export const AddName = styled.input`
 `;
 
 export const AddFrice = styled.input`
-  width: 80px;
+  width: 300px;
   height: 25px;
   padding-left: 3px;
-  font-size: 20px;
-  text-align: center;
+`;
+
+export const ProductQuantity = styled.div`
+  width: 180px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid black;
+  margin-bottom: 10px;
+`;
+
+export const QUp = styled.input`
+  width: 30px;
+  height: 20px;
+  margin-right: 10px;
+  margin-left: 10px;
+  cursor: pointer;
+`;
+
+export const QDown = styled.input`
+  width: 30px;
+  height: 20px;
+  margin-right: 10px;
+  margin-left: 10px;
+  cursor: pointer;
+`;
+
+export const Select = styled.select`
+  cursor: pointer;
 `;
