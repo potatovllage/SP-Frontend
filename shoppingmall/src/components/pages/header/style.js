@@ -17,6 +17,7 @@ export const LogoImg = styled.img`
   height: 100px;
   margin-right: 70px;
   margin-left: 100px;
+  cursor: pointer;
 `;
 
 export const Select = styled.input`
@@ -32,18 +33,21 @@ export const Cartimg = styled.img`
   width: 40px;
   height: 40px;
   margin-right: 35px;
+  cursor: pointer;
 `;
 
 export const Userimg = styled.img`
   width: 35px;
-  height: 3r5px;
+  height: 35px;
   margin-right: 35px;
+  cursor: pointer;
 `;
 export const Truckimg = styled.img`
   width: 48px;
   height: 48px;
   margin-top: 3px;
   margin-right: 70px;
+  cursor: pointer;
 `;
 
 export const HeadLine = styled.div`

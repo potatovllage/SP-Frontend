@@ -28,6 +28,7 @@ export const AddProduct = styled.input`
   margin-right: 40px;
   border: 1px solid black;
   background-color: white;
+  cursor: pointer;
 `;
 
 export const GoodName = styled.h2`

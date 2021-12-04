@@ -17,7 +17,7 @@ function TruckPage() {
             <tr>
               <s.TableTd>CJ 대한통운</s.TableTd>
               <s.TableTd>
-                <button
+                <s.TruckBtn
                   onClick={() =>
                     window.open(
                       "https://www.cjlogistics.com//ko/tool/parcel/tracking"
@@ -25,25 +25,25 @@ function TruckPage() {
                   }
                 >
                   다음
-                </button>
+                </s.TruckBtn>
               </s.TableTd>
             </tr>
             <tr>
               <s.TableTd>로젠택배</s.TableTd>
               <s.TableTd>
-                <button
+                <s.TruckBtn
                   onClick={() =>
                     window.open("https://www.ilogen.com/web/personal/tkSearch")
                   }
                 >
                   다음
-                </button>
+                </s.TruckBtn>
               </s.TableTd>
             </tr>
             <tr>
               <s.TableTd>한진</s.TableTd>
               <s.TableTd>
-                <button
+                <s.TruckBtn
                   onClick={() =>
                     window.open(
                       "https://www.hanjin.co.kr/kor/CMS/DeliveryMgr/WaybillSch.do?mCode=MN038"
@@ -51,13 +51,13 @@ function TruckPage() {
                   }
                 >
                   다음
-                </button>
+                </s.TruckBtn>
               </s.TableTd>
             </tr>
             <tr>
               <s.TableTd>롯데택배</s.TableTd>
               <s.TableTd>
-                <button
+                <s.TruckBtn
                   onClick={() =>
                     window.open(
                       "https://www.lotteglogis.com/mobile/reservation/tracking/index"
@@ -65,13 +65,13 @@ function TruckPage() {
                   }
                 >
                   다음
-                </button>
+                </s.TruckBtn>
               </s.TableTd>
             </tr>
             <tr>
               <s.LastTd>우채국택배</s.LastTd>
               <s.LastTd>
-                <button
+                <s.TruckBtn
                   onClick={() =>
                     window.open(
                       "https://service.epost.go.kr/iservice/usr/trace/usrtrc001k01.jsp"
@@ -79,7 +79,7 @@ function TruckPage() {
                   }
                 >
                   다음
-                </button>
+                </s.TruckBtn>
               </s.LastTd>
             </tr>
           </s.Table>

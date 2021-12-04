@@ -36,3 +36,7 @@ export const LastTd = styled.td`
   padding-bottom: 10px;
   text-align: center;
 `;
+
+export const TruckBtn = styled.button`
+  cursor: pointer;
+`;
