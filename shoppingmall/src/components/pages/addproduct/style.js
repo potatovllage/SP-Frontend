@@ -77,3 +77,28 @@ export const QDown = styled.input`
 export const Select = styled.select`
   cursor: pointer;
 `;
+
+export const UpDiv = styled.div`
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+`;
+
+export const Upload = styled.input`
+  width: 300px;
+  height: 40px;
+  border: 1px solid black;
+  background-color: black;
+  color: white;
+  font-size: 16px;
+`;
+
+export const ImagePreviewBox = styled.img`
+  width: 450px;
+  height: 450px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 40px;
+`;

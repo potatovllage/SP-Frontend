@@ -1,25 +1,18 @@
 import React, { useState, useRef } from "react";
 import * as s from "./style";
 import Header from "../header/Header";
+import axios from "axios";
 
 function AddProduct() {
-  const [Quantity, setQuantity] = useState(0);
-  const detailRef = useRef();
-
-  const onIncrease = () => {
-    const pCount = Quantity + 1;
-    setQuantity(pCount);
-  };
-
-  const onDecrease = () => {
-    const mCount = Quantity - 1;
-    if (mCount < 0) {
-      alert("0 이하로 내려갈 수 없습니다.");
-    } else {
-      setQuantity(mCount);
-    }
-  };
-
+  const [fileState, setFileState] = useState("");
+  const [fileURL, setFileURL] = useState("");
+  const [formData, setFormData] = useState({
+    title: "",
+    price: "",
+    count: 0,
+    category: "",
+  });
+  const fileInput = useRef();
   const Category = [
     "카테고리를 설정해주세요",
     "1. 베스트딜",
@@ -34,6 +27,48 @@ function AddProduct() {
     "10. 티켓",
   ];
 
+  const onChangeFileInput = (e) => {
+    e.preventDefault();
+    let file = e.target.files[0];
+    let reader = new FileReader();
+
+    reader.onloadend = () => {
+      console.log(reader.result);
+      setFileState(file);
+      setFileURL(reader.result);
+    };
+    if (file) {
+      reader.readAsDataURL(file);
+    }
+  };
+
+  const onChangeForm = (e) => {
+    const { name, value } = e.target;
+    setFormData({
+      ...formData,
+      [name]: value,
+    });
+  };
+  const onClickSubmit = () => {
+    const frm = new FormData();
+    console.log(fileState);
+    frm.append("title", formData.title);
+    frm.append("titleImage", fileURL);
+    frm.append("price", formData.price);
+    frm.append("category", formData.category);
+    frm.append("count", formData.count);
+
+    axios
+      .post("http://13.125.241.207:8088/board/product", frm, {
+        headers: {
+          "Content-Type": "multipart/form-data",
+        },
+      })
+      .then((response) => {
+        console.log(response.data);
+      })
+      .catch((error) => console.log(error));
+  };
   return (
     <>
       <Header />
@@ -41,25 +76,72 @@ function AddProduct() {
         <s.AddForm>
           <s.ImgForm>
             <s.H2>이미지 추가</s.H2>
-            <s.AddImg>+</s.AddImg>
+            {fileState ? (
+              <s.ImagePreviewBox
+                src={fileURL}
+                onClick={(e) => {
+                  e.preventDefault();
+                  fileInput.current.click();
+                }}
+              ></s.ImagePreviewBox>
+            ) : (
+              <s.AddImg
+                onClick={(e) => {
+                  e.preventDefault();
+                  fileInput.current.click();
+                }}
+              >
+                +
+              </s.AddImg>
+            )}
           </s.ImgForm>
+          <input
+            hidden={true}
+            ref={fileInput}
+            type="file"
+            accept="image/*"
+            onChange={onChangeFileInput}
+          ></input>
           <s.InfoAdd>
             <s.H2>상품명</s.H2>
-            <s.AddName type="text" />
+            <s.AddName type="text" name="title" onChange={onChangeForm} />
             <s.H2>상품 가격</s.H2>
-            <s.AddFrice type="text" />
+            <s.AddFrice type="text" name="price" onChange={onChangeForm} />
             <s.H2>수량</s.H2>
             <s.ProductQuantity>
-              <s.QDown type="button" value="-" onClick={onDecrease} />
-              <s.H2>{Quantity}</s.H2>
-              <s.QUp type="button" value="+" onClick={onIncrease} />
+              <s.QDown
+                type="button"
+                value="-"
+                onClick={() => {
+                  if (!(formData.count <= 0)) {
+                    setFormData({
+                      ...formData,
+                      count: formData.count - 1,
+                    });
+                  }
+                }}
+              />
+              <s.H2>{formData.count}</s.H2>
+              <s.QUp
+                type="button"
+                value="+"
+                onClick={() =>
+                  setFormData({
+                    ...formData,
+                    count: formData.count + 1,
+                  })
+                }
+              />
             </s.ProductQuantity>
             <s.H2>카테고리</s.H2>
-            <s.Select id="selectList" ref={detailRef}>
+            <s.Select name="category" onChange={onChangeForm}>
               {Category.map((detail) => (
                 <option key={detail}>{detail}</option>
               ))}
             </s.Select>
+            <s.UpDiv>
+              <s.Upload type="button" value="등록" onClick={onClickSubmit} />
+            </s.UpDiv>
           </s.InfoAdd>
         </s.AddForm>
       </s.AddProduct>
