@@ -16,7 +16,7 @@ function AddProduct() {
   const Category = [
     "카테고리를 설정해주세요",
     "1. 베스트딜",
-    "2. 할인상품",
+    "2.할인상품",
     "3. 쿠폰/혜택",
     "4. 당일배송",
     "5. 이벤트! 5000원 할인",
@@ -51,17 +51,16 @@ function AddProduct() {
   };
   const onClickSubmit = () => {
     const frm = new FormData();
-    console.log(fileState);
-    frm.append("title", formData.title);
-    frm.append("titleImage", fileURL);
-    frm.append("price", formData.price);
-    frm.append("category", formData.category);
-    frm.append("count", formData.count);
-
+    frm.append("title", "일리삼사오");
+    frm.append("titleImage", fileState);
+    frm.append("price", 10000);
+    frm.append("category", "새로운 카테고");
+    frm.append("count", 123);
+    const token = localStorage.getItem("accessToken");
     axios
       .post("http://13.125.241.207:8088/board/product", frm, {
         headers: {
-          "Content-Type": "multipart/form-data",
+          Authorization: `Bearer ${token}`,
         },
       })
       .then((response) => {
@@ -106,7 +105,12 @@ function AddProduct() {
             <s.H2>상품명</s.H2>
             <s.AddName type="text" name="title" onChange={onChangeForm} />
             <s.H2>상품 가격</s.H2>
-            <s.AddFrice type="text" name="price" onChange={onChangeForm} />
+            <s.AddFrice
+              type="number"
+              min={0}
+              name="price"
+              onChange={onChangeForm}
+            />
             <s.H2>수량</s.H2>
             <s.ProductQuantity>
               <s.QDown
