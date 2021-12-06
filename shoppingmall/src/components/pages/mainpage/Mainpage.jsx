@@ -36,30 +36,30 @@ function Mainpage() {
         </s.BannerDiv>
         <s.FieldMenu>
           <s.MenuUl>
-            <Link to="/book">
+            <Link to="/list/book">
               <s.MenuLi>
                 <s.MenuImg src={book} alt="logo" />책
               </s.MenuLi>
             </Link>
-            <Link to="/car">
+            <Link to="/list/car">
               <s.MenuLi>
                 <s.MenuImg src={car} alt="logo" />
                 자동차용품
               </s.MenuLi>
             </Link>
-            <Link to="/hotel">
+            <Link to="/list/hotel">
               <s.MenuLi>
                 <s.MenuImg src={hotel} alt="logo" />
                 호텔
               </s.MenuLi>
             </Link>
-            <Link to="/globon">
+            <Link to="/list/globon">
               <s.MenuLi>
                 <s.MenuImg src={globe} alt="logo" />
                 해외직구
               </s.MenuLi>
             </Link>
-            <Link to="/ticket">
+            <Link to="/list/ticket">
               <s.MenuLi5>
                 <s.MenuImg src={ticket} alt="logo" />
                 티켓
