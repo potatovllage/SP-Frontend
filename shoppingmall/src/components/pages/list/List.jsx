@@ -1,8 +1,9 @@
 import React from "react";
+import { useParams } from "react-router";
 import Header from "../header/Header";
 import * as s from "./style";
 
-function List(props) {
+function List() {
   const menus = [
     "메인이미지 상품명",
     "메인이미지 상품명",
@@ -22,7 +23,8 @@ function List(props) {
     "메인이미지 상품명",
   ];
 
-  const BookList = menus.map((menu, index) => {
+  const params = useParams();
+  const List = menus.map((menu, index) => {
     return (
       <>
         <s.ListProduct>{menu}</s.ListProduct>
@@ -33,10 +35,10 @@ function List(props) {
     <>
       <Header />
       <s.Interver>
-        <h2>{props.name}</h2>
+        <h2>{params.listname}</h2>
       </s.Interver>
       <s.List>
-        <s.MoreList>{BookList}</s.MoreList>
+        <s.MoreList>{List}</s.MoreList>
       </s.List>
     </>
   );
