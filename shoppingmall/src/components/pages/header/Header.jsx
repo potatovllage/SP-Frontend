@@ -42,16 +42,16 @@ function Header() {
       <s.HeadLine />
       <s.MenuDiv>
         <s.FStart>
-          <Link to="/best">
+          <Link to="/list/best">
             <s.MenuBtn1 type="button" value="베스트딜" />
           </Link>
-          <Link to="/discount">
+          <Link to="/list/discount">
             <s.MenuBtn type="button" value="할인상품" />
           </Link>
           <Link to="/coupon">
             <s.MenuBtn type="button" value="쿠폰/혜택" />
           </Link>
-          <Link to="/today">
+          <Link to="/list/today">
             <s.MenuBtn type="button" value="당일배송" />
           </Link>
           {localStorage.getItem("accessToken") ? (
