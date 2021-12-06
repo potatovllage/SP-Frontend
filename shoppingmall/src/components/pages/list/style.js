@@ -1,13 +1,13 @@
 import styled from "styled-components";
 
-export const Book = styled.div`
+export const List = styled.div`
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 `;
 
-export const BookList = styled.div`
+export const MoreList = styled.div`
   width: 1200px;
   height: 1400px;
   background-color: #dcdcdc;
@@ -26,7 +26,7 @@ export const Interver = styled.div`
   align-items: center;
 `;
 
-export const BookProduct = styled.div`
+export const ListProduct = styled.div`
   width: 250px;
   height: 300px;
   margin: 20px 0px 0px 20px;

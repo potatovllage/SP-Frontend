@@ -1,8 +1,8 @@
 import React from "react";
-import Header from "../../header/Header";
+import Header from "../header/Header";
 import * as s from "./style";
 
-function Book() {
+function List(props) {
   const menus = [
     "메인이미지 상품명",
     "메인이미지 상품명",
@@ -25,7 +25,7 @@ function Book() {
   const BookList = menus.map((menu, index) => {
     return (
       <>
-        <s.BookProduct>{menu}</s.BookProduct>
+        <s.ListProduct>{menu}</s.ListProduct>
       </>
     );
   });
@@ -33,12 +33,12 @@ function Book() {
     <>
       <Header />
       <s.Interver>
-        <h2>BOOK</h2>
+        <h2>{props.name}</h2>
       </s.Interver>
-      <s.Book>
-        <s.BookList>{BookList}</s.BookList>
-      </s.Book>
+      <s.List>
+        <s.MoreList>{BookList}</s.MoreList>
+      </s.List>
     </>
   );
 }
-export default Book;
+export default List;
