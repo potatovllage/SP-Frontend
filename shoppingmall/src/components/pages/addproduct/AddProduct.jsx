@@ -51,16 +51,17 @@ function AddProduct() {
   };
   const onClickSubmit = () => {
     const frm = new FormData();
-    frm.append("title", "일리삼사오");
+    frm.append("title", formData.title);
     frm.append("titleImage", fileState);
-    frm.append("price", 10000);
-    frm.append("category", "새로운 카테고");
-    frm.append("count", 123);
+    frm.append("price", formData.price);
+    frm.append("category", formData.category);
+    frm.append("count", formData.count);
     const token = localStorage.getItem("accessToken");
     axios
       .post("http://13.125.241.207:8088/board/product", frm, {
         headers: {
           Authorization: `Bearer ${token}`,
+          "Content-Type": "application/json;charset=UTF-8",
         },
       })
       .then((response) => {
