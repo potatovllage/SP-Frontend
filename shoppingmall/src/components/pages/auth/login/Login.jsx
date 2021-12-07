@@ -4,6 +4,7 @@ import logo from "../../../../assets/logo.jpg";
 import * as s from "./style";
 import axios from "axios";
 
+axios.defaults.baseURL = "http://13.125.241.207:8088";
 function Login() {
   const navigate = useNavigate();
 
@@ -29,13 +30,11 @@ function Login() {
     });
   };
 
+  const data = { email: email, userid: userid, password: password };
+
   const onLogin = (e) => {
     axios
-      .post("http://13.125.241.207:8088/auth/login", {
-        email: email,
-        userid: userid,
-        password: password,
-      })
+      .post("/auth/login", data)
       .then((res) => {
         console.log(res);
         console.log(res.data.accessToken);
