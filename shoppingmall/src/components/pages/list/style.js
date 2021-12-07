@@ -26,12 +26,25 @@ export const Interver = styled.div`
   align-items: center;
 `;
 
+export const ListImg = styled.img`
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+`;
+
+export const ListText = styled.div`
+  margin-top: 30px;
+  color: black;
+`;
+
 export const ListProduct = styled.div`
   width: 250px;
   height: 300px;
   margin: 20px 0px 0px 20px;
   background-color: white;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 `;
