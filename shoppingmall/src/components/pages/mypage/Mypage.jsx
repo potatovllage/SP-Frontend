@@ -19,8 +19,6 @@ function Mypage() {
                 <s.AddProduct type="button" value="상품 등록" />
               </Link>
             </s.MypageMenu>
-            <s.GoodName>좋아요한 상품</s.GoodName>
-            <s.Goodform></s.Goodform>
             <s.BuyName>구매 내역</s.BuyName>
             <s.Goodform></s.Goodform>
           </s.Mypage>
