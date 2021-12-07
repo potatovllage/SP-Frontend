@@ -80,6 +80,7 @@ export const MenuLi = styled.li`
   float: left;
   text-align: center;
   font-family: "Noto Sans KR", sans-serif;
+  color: black;
   &:hover {
     text-decoration: none;
   }
@@ -94,6 +95,7 @@ export const MenuLi5 = styled.li`
   float: left;
   text-align: center;
   font-family: "Noto Sans KR", sans-serif;
+  color: black;
   &:hover {
     text-decoration: underline;
   }
