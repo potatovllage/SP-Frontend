@@ -12,12 +12,23 @@ import * as s from "./style";
 import Header from "../header/Header";
 
 function Mainpage() {
-  const menus = ["1", "2", "3", "4", "5", "6", "7", "8"];
+  const menus = [
+    "새우깡",
+    "과자모음",
+    "LED전구",
+    "삼성 노트북",
+    "맥북",
+    "삼성 버즈 프로",
+    "아이폰 10",
+    "칠성사이다",
+  ];
 
   const menuList = menus.map((menu, index) => {
     return (
       <>
-        <s.StarMenuList>{menu}</s.StarMenuList>
+        <Link to="/product" style={{ textDecoration: "none" }}>
+          <s.StarMenuList>{menu}</s.StarMenuList>
+        </Link>
       </>
     );
   });
