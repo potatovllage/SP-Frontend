@@ -8,6 +8,7 @@ import ticket from "../../../assets/plane-tickets.png";
 import banner1 from "../../../assets/banner1.png";
 import banner2 from "../../../assets/banner2.png";
 import banner3 from "../../../assets/banner3.png";
+import logo from "../../../assets/logo.jpg";
 import * as s from "./style";
 import Header from "../header/Header";
 
@@ -27,7 +28,12 @@ function Mainpage() {
     return (
       <>
         <Link to="/product" style={{ textDecoration: "none" }}>
-          <s.StarMenuList>{menu}</s.StarMenuList>
+          <s.StarMenuList>
+            <div>
+              <s.ListImg src={logo} alt="logo" />
+            </div>
+            {menu}
+          </s.StarMenuList>
         </Link>
       </>
     );
