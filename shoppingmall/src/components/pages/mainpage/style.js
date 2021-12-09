@@ -121,6 +121,13 @@ export const StarMenu = styled.div`
   align-items: center;
 `;
 
+export const ListImg = styled.img`
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+`;
+
 export const StarMenuList = styled.div`
   width: 300px;
   height: 180px;
