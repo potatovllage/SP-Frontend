@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import swal from "sweetalert";
 import logo from "../../../../assets/logo.jpg";
 import * as s from "./style";
 import axios from "axios";
@@ -39,10 +40,12 @@ function Login() {
         console.log(res);
         console.log(res.data.accessToken);
         localStorage.setItem("accessToken", res.data.accessToken);
+        swal("로그인 성공", "You clicked the button!", "success");
         navigate("/");
       })
       .catch((e) => {
         console.log(e);
+        swal("로그인 실패", "You clicked the button!", "error");
       });
 
     const onReissue = () => {
