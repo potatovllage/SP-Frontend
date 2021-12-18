@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import swal from "sweetalert";
 import logo from "../../../../assets/logo.jpg";
 import * as s from "./style";
 import axios from "axios";
@@ -32,6 +33,7 @@ function SignUp() {
       })
       .then((res) => {
         console.log(res);
+        swal("회원가입 성공", "You clicked the button!", "success");
         navigate("/login");
       })
       .catch((e) => {
