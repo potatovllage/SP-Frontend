@@ -35,6 +35,7 @@ export const CouponBtn = styled.input`
   border-radius: 9px 9px 0 0;
   box-shadow: 0px 1px 10px 5px gray;
   font-size: 18px;
+  cursor: pointer;
 `;
 
 export const BenefitsBtn = styled.input`
@@ -46,6 +47,7 @@ export const BenefitsBtn = styled.input`
   background-color: rgba(0, 0, 0, 0.6);
   font-size: 18px;
   color: white;
+  cursor: pointer;
 `;
 
 export const CouponBanner = styled.img`

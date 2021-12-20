@@ -77,6 +77,7 @@ export const MenuBtn1 = styled.input`
   border: none;
   background-color: white;
   font-size: 16px;
+  cursor: pointer;
   font-family: "Noto Sans KR", sans-serif;
   &:hover {
     text-decoration: underline;
@@ -89,6 +90,7 @@ export const MenuBtn = styled.input`
   border: none;
   background-color: white;
   font-size: 16px;
+  cursor: pointer;
   font-family: "Noto Sans KR", sans-serif;
   &:hover {
     text-decoration: underline;
@@ -102,6 +104,7 @@ export const LoginBtn = styled.input`
   border: none;
   background-color: white;
   font-size: 16px;
+  cursor: pointer;
   font-family: "Noto Sans KR", sans-serif;
   &:hover {
     text-decoration: underline;
@@ -115,6 +118,7 @@ export const Logout = styled.input`
   border: none;
   background-color: white;
   font-size: 16px;
+  cursor: pointer;
   font-family: "Noto Sans KR", sans-serif;
   &:hover {
     text-decoration: underline;
