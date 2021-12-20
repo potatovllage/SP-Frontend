@@ -4,6 +4,7 @@ import swal from "sweetalert";
 import logo from "../../../../assets/img/logo.jpg";
 import * as s from "./style";
 import axios from "axios";
+import { BASE_URL } from "../../../../api/axios";
 
 function SignUp() {
   const [input, setInput] = useState({
@@ -25,7 +26,7 @@ function SignUp() {
 
   const submitOn = () => {
     axios
-      .post("http://13.125.241.207:8088/auth/join", {
+      .post(`${BASE_URL}auth/join`, {
         email: email,
         userid: userid,
         password: password,
