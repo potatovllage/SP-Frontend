@@ -50,7 +50,7 @@ function Login() {
 
     const onReissue = () => {
       axios
-        .post(`${BASE_URL}auth/reissue`)
+        .post(`${BASE_URL}/auth/reissue`)
         .then(onLoginSuccess)
         .catch((e) => {
           console.log(e);
