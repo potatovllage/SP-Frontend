@@ -1,9 +1,9 @@
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
-import logo from "../../../assets/logo.jpg";
-import truck from "../../../assets/van.png";
-import user from "../../../assets/user.png";
-import cart from "../../../assets/shopping-cart.png";
+import logo from "../../../assets/img/logo.jpg";
+import truck from "../../../assets/img/van.png";
+import user from "../../../assets/img/user.png";
+import cart from "../../../assets/img/shopping-cart.png";
 import * as s from "./style";
 
 function Header() {
