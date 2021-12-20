@@ -4,8 +4,8 @@ import swal from "sweetalert";
 import logo from "../../../../assets/img/logo.jpg";
 import * as s from "./style";
 import axios from "axios";
+import { BASE_URL } from "../../../../api/axios";
 
-axios.defaults.baseURL = "http://13.125.241.207:8088";
 function Login() {
   const navigate = useNavigate();
 
@@ -35,7 +35,7 @@ function Login() {
 
   const onLogin = (e) => {
     axios
-      .post("/auth/login", data)
+      .post(`${BASE_URL}/auth/login`, data)
       .then((res) => {
         console.log(res);
         console.log(res.data.accessToken);
@@ -50,7 +50,7 @@ function Login() {
 
     const onReissue = () => {
       axios
-        .post("http://13.125.241.207:8088/auth/reissue")
+        .post(`${BASE_URL}auth/reissue`)
         .then(onLoginSuccess)
         .catch((e) => {
           console.log(e);

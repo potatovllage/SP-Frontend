@@ -11,7 +11,7 @@ export const Loginform = styled.div`
   width: 350px;
   height: 530px;
   border: 5px solid black;
-  margin-top: 50px;
+  margin-top: 100px;
   display: flex;
   flex-direction: column;
   justify-content: center;
