@@ -1,26 +1,48 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import Header from "../header/Header";
 import * as s from "./style";
+import axios from "axios";
+import { BASE_URL } from "../../../api/axios";
 
 function Mypage() {
-  const MyInfo = {
-    name: "OOO",
-  };
+  const [userGet, SetuserGet] = useState({
+    nickname: "",
+  });
+
+  const token = localStorage.getItem("accessToken");
+
+  useEffect(() => {
+    axios
+      .get(`${BASE_URL}/user/page`, {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      })
+      .then((res) => {
+        SetuserGet(res.data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }, [token]);
+
   return (
     <>
       {localStorage.getItem("accessToken") ? (
         <>
           <Header />
           <s.Mypage>
-            <s.MypageMenu>
-              <s.MyName>{MyInfo.name}</s.MyName>
-              <Link to="/addProduct">
-                <s.AddProduct type="button" value="상품 등록" />
-              </Link>
-            </s.MypageMenu>
-            <s.BuyName>구매 내역</s.BuyName>
-            <s.Goodform></s.Goodform>
+            <div>
+              <s.MypageMenu>
+                <s.MyName>{userGet.nickname}</s.MyName>
+                <Link to="/addProduct">
+                  <s.AddProduct type="button" value="상품 등록" />
+                </Link>
+              </s.MypageMenu>
+              <s.BuyName>구매 내역</s.BuyName>
+              <s.Goodform></s.Goodform>
+            </div>
           </s.Mypage>
         </>
       ) : (
