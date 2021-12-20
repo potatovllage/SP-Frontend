@@ -32,7 +32,7 @@ function List() {
   const List = menus.map((menu, index) => {
     return (
       <>
-        <Link to="/product" style={{ textDecoration: "none" }}>
+        <Link to="/product" style={{ textDecoration: "none", color: "black" }}>
           <s.ListProduct>
             <div>
               <s.ListImg src={logo} alt="logo" />
