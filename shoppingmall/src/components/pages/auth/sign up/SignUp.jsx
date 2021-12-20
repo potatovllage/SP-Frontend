@@ -26,7 +26,7 @@ function SignUp() {
 
   const submitOn = () => {
     axios
-      .post(`${BASE_URL}auth/join`, {
+      .post(`${BASE_URL}/auth/join`, {
         email: email,
         userid: userid,
         password: password,
