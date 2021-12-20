@@ -2,6 +2,7 @@ import React, { useState, useRef } from "react";
 import * as s from "./style";
 import Header from "../header/Header";
 import axios from "axios";
+import { BASE_URL } from "../../../api/axios";
 
 function AddProduct() {
   const [fileState, setFileState] = useState("");
@@ -58,7 +59,7 @@ function AddProduct() {
     frm.append("count", formData.count);
     const token = localStorage.getItem("accessToken");
     axios
-      .post("http://13.125.241.207:8088/board/product", frm, {
+      .post(`${BASE_URL}/board/product`, frm, {
         headers: {
           Authorization: `Bearer ${token}`,
           "Content-Type": "application/json;charset=UTF-8",
