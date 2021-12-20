@@ -7,11 +7,13 @@ function Basket() {
     <>
       <Header />
       <s.Basket>
-        <s.BasketMenu>
-          <s.basketname>장바구니</s.basketname>
-          <s.DeleteBtn type="button" value="삭제" />
-        </s.BasketMenu>
-        <s.Basketform></s.Basketform>
+        <div>
+          <s.BasketMenu>
+            <s.basketname>장바구니</s.basketname>
+            <s.DeleteBtn type="button" value="삭제" />
+          </s.BasketMenu>
+          <s.Basketform></s.Basketform>
+        </div>
       </s.Basket>
     </>
   );

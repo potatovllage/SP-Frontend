@@ -1,11 +1,10 @@
 import styled from "styled-components";
 
 export const Basket = styled.div`
-  width: 80%;
+  width: 100%;
   display: flex;
-  flex-direction: column;
   justify-content: center;
-  margin: 0 auto;
+  align-items: center;
 `;
 
 export const basketname = styled.h2`
