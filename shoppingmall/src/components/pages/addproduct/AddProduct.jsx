@@ -16,16 +16,14 @@ function AddProduct() {
   const fileInput = useRef();
   const Category = [
     "카테고리를 설정해주세요",
-    "1. 베스트딜",
-    "2.할인상품",
-    "3. 쿠폰/혜택",
-    "4. 당일배송",
-    "5. 이벤트! 5000원 할인",
-    "6. 책",
-    "7. 자동차용품",
-    "8. 호텔",
-    "9. 해외직구",
-    "10. 티켓",
+    "베스트딜",
+    "할인상품",
+    "당일배송",
+    "책",
+    "6.자동차용품",
+    "호텔",
+    "해외직구",
+    "티켓",
   ];
 
   const onChangeFileInput = (e) => {
@@ -50,6 +48,7 @@ function AddProduct() {
       [name]: value,
     });
   };
+
   const onClickSubmit = () => {
     const frm = new FormData();
     frm.append("title", formData.title);
@@ -57,9 +56,13 @@ function AddProduct() {
     frm.append("price", formData.price);
     frm.append("category", formData.category);
     frm.append("count", formData.count);
+
+    console.log(frm);
+
     const token = localStorage.getItem("accessToken");
+
     axios
-      .post(`${BASE_URL}/board/product`, frm, {
+      .post(`${BASE_URL}/board/product/`, frm, {
         headers: {
           Authorization: `Bearer ${token}`,
           "Content-Type": "application/json;charset=UTF-8",
