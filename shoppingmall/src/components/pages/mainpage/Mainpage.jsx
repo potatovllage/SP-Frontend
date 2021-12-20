@@ -1,14 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import book from "../../../assets/book.png";
-import car from "../../../assets/sports-car.png";
-import hotel from "../../../assets/hotel.png";
-import globe from "../../../assets/globe.png";
-import ticket from "../../../assets/plane-tickets.png";
-import banner1 from "../../../assets/banner1.png";
-import banner2 from "../../../assets/banner2.png";
-import banner3 from "../../../assets/banner3.png";
-import logo from "../../../assets/logo.jpg";
+import book from "../../../assets/img/book.png";
+import car from "../../../assets/img/sports-car.png";
+import hotel from "../../../assets/img/hotel.png";
+import globe from "../../../assets/img/globe.png";
+import ticket from "../../../assets/img/plane-tickets.png";
+import banner1 from "../../../assets/img/banner1.png";
+import banner2 from "../../../assets/img/banner2.png";
+import banner3 from "../../../assets/img/banner3.png";
+import logo from "../../../assets/img/logo.jpg";
 import * as s from "./style";
 import Header from "../header/Header";
 

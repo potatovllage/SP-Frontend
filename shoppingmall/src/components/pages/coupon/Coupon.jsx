@@ -1,12 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Header from "../header/Header";
-import banner4 from "../../../assets/banner4.png";
-import coupon1 from "../../../assets/coupon1.png";
-import coupon2 from "../../../assets/coupon2.png";
-import coupon3 from "../../../assets/coupon3.png";
-import coupon4 from "../../../assets/coupon4.png";
-import coupon5 from "../../../assets/coupon5.png";
+import banner4 from "../../../assets/img/banner4.png";
+import coupon1 from "../../../assets/img/coupon1.png";
+import coupon2 from "../../../assets/img/coupon2.png";
+import coupon3 from "../../../assets/img/coupon3.png";
+import coupon4 from "../../../assets/img/coupon4.png";
+import coupon5 from "../../../assets/img/coupon5.png";
 import * as s from "./style";
 
 function Coupon() {

@@ -1,12 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Header from "../header/Header";
-import banner5 from "../../../assets/banner5.png";
-import benefit1 from "../../../assets/benefit1.png";
-import benefit2 from "../../../assets/benefit2.png";
-import benefit3 from "../../../assets/benefit3.png";
-import benefit4 from "../../../assets/benefit4.png";
-import benefit5 from "../../../assets/benefit5.png";
+import banner5 from "../../../assets/img/banner5.png";
+import benefit1 from "../../../assets/img/benefit1.png";
+import benefit2 from "../../../assets/img/benefit2.png";
+import benefit3 from "../../../assets/img/benefit3.png";
+import benefit4 from "../../../assets/img/benefit4.png";
+import benefit5 from "../../../assets/img/benefit5.png";
 import * as s from "./style";
 
 function Benefit() {
