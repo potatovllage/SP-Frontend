@@ -21,7 +21,7 @@ export const LogoImg = styled.img`
 `;
 
 export const Select = styled.input`
-  width: 900px;
+  width: 500px;
   height: 25px;
   padding-top: 2px;
   padding-left: 12px;
