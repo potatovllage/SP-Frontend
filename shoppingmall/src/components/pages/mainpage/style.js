@@ -97,7 +97,7 @@ export const MenuLi5 = styled.li`
   font-family: "Noto Sans KR", sans-serif;
   color: black;
   &:hover {
-    text-decoration: underline;
+    text-decoration: none;
   }
   &:link {
     color: black;
