@@ -8,12 +8,13 @@ export const Main = styled.div`
 export const BannerDiv = styled.div`
   width: 100%;
   height: 350px;
+  margin-top: 10px;
 `;
 
 export const Banner = styled.div`
   width: 100%;
   height: 300px;
-  overflow: hidden;
+  margin: auto;
 `;
 
 const slide = keyframes`
