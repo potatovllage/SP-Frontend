@@ -29,7 +29,7 @@ function Mainpage() {
 
   useEffect(() => {
     axios
-      .get(`${BASE_URL}/board/category`)
+      .get(`${BASE_URL}/board/product`)
       .then((res) => {
         console.log(res.data);
         setInfo(res.data);
