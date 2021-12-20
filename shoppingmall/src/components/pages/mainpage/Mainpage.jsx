@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import book from "../../../assets/img/book.png";
 import car from "../../../assets/img/sports-car.png";
@@ -11,8 +11,11 @@ import banner3 from "../../../assets/img/banner3.png";
 import logo from "../../../assets/img/logo.jpg";
 import * as s from "./style";
 import Header from "../header/Header";
+import axios from "axios";
+import { BASE_URL } from "../../../api/axios";
 
 function Mainpage() {
+  const [info, setInfo] = useState([]);
   const menus = [
     "새우깡",
     "과자모음",
@@ -23,6 +26,18 @@ function Mainpage() {
     "아이폰 10",
     "칠성사이다",
   ];
+
+  useEffect(() => {
+    axios
+      .get(`${BASE_URL}/board/category`)
+      .then((res) => {
+        console.log(res.data);
+        setInfo(res.data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }, []);
 
   const menuList = menus.map((menu, index) => {
     return (
