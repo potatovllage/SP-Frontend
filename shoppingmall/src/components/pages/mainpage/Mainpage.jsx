@@ -1,4 +1,7 @@
 import React, { useEffect, useState } from "react";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import { Link } from "react-router-dom";
 import book from "../../../assets/img/book.png";
 import car from "../../../assets/img/sports-car.png";
@@ -16,6 +19,19 @@ import { BASE_URL } from "../../../api/axios";
 
 function Mainpage() {
   const [info, setInfo] = useState([]);
+
+  const settings = {
+    dots: true,
+    infinite: true,
+    arrows: false,
+    speed: 1000,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    cssEase: "linear",
+  };
+
   const menus = [
     "새우깡",
     "과자모음",
@@ -55,15 +71,23 @@ function Mainpage() {
   });
   return (
     <>
-      <Header></Header>
+      <Header />
       <s.Main>
         <s.BannerDiv>
           <s.Banner>
-            <s.BannerUl>
-              <s.BannerLi style={{ backgroundImage: `url(${banner1})` }} />{" "}
-              <s.BannerLi style={{ backgroundImage: `url(${banner2})` }} />
-              <s.BannerLi style={{ backgroundImage: `url(${banner3})` }} />
-            </s.BannerUl>
+            <div>
+              <Slider {...settings}>
+                <div>
+                  <img src={banner1} alt="logo" />
+                </div>
+                <div>
+                  <img src={banner2} alt="logo" />
+                </div>
+                <div>
+                  <img src={banner3} alt="logo" />
+                </div>
+              </Slider>
+            </div>
           </s.Banner>
         </s.BannerDiv>
         <s.FieldMenu>
