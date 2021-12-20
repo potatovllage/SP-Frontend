@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 import Header from "../header/Header";
 import * as s from "./style";
 import logo from "../../../assets/img/logo.jpg";
-import axios from "axios";
 
 function List() {
   const menus = [
